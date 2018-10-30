@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    
+    <filter>
+        <filter-name>CharsetFilter</filter-name>
+        <filter-class>constantes.CharsetFilter</filter-class>
+        <init-param>
+            <param-name>requestEncoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>CharsetFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+  
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <page-encoding>UTF-8</page-encoding>
+        </jsp-property-group>
+    </jsp-config>
+    
+    <servlet>
+        <servlet-name>ServiceTracker</servlet-name>
+        <servlet-class>servicios.ServiceTracker</servlet-class>
+    </servlet>
+    
+    
+    
+    
+    <servlet-mapping>
+        <servlet-name>ServiceTracker</servlet-name>
+        <url-pattern>/ServiceTracker/*</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+    
+    <context-param>
+        <param-name>DataBaseEngine</param-name>
+        <param-value>oracle</param-value>
+    </context-param>
+    <context-param>
+        <param-name>DataSourceL</param-name>
+        <param-value>localhost</param-value>
+    </context-param>
+    <context-param>
+        <param-name>DataSource</param-name>
+        <param-value>74.208.235.166</param-value>
+    </context-param>
+    <context-param>
+        <param-name>DataBase</param-name>
+        <param-value>qiaoban</param-value>
+    </context-param>
+    <context-param>
+        <param-name>User</param-name>
+        <!--<param-value>APODACA</param-value>-->
+        <!--<param-value>RINOCERONTEQA</param-value>-->
+        <!--<param-value>DEMOFAY</param-value>-->
+        <param-value>WMSFRAI</param-value>
+        <!--<param-value>GAMMAMEDICAL</param-value>-->
+        <!--<param-value>DESARROLLO</param-value>-->
+        <!--<param-value>RINOTULTI</param-value>-->
+          <!--<param-value>ADL</param-value>-->
+       <!--<param-value>DESARROLLO</param-value>-->
+       <!--<param-value>ZORROWMS</param-value>-->
+    </context-param>
+    <context-param>
+        <param-name>Password</param-name>   
+        <!--<param-value>0APODACAKURT0</param-value>-->
+        <!--<param-value>01RINOCERONTETNGRM01</param-value>-->
+        <!--<param-value>0DEMOFAYKURT0</param-value>-->
+        <param-value>0WMSFRAIKURT0</param-value>
+        <!--<param-value>0GAMMAMEDICALKURT0</param-value>-->
+        <!--<param-value>01D3S4RR0LL0KURT01</param-value>-->
+        <!--<param-value>0RINOTULTIKURT0</param-value>-->
+         <!-- <param-value>1ADLTNGRM1</param-value>-->
+        <!--<param-value>1DESARROLLOTNGRM1</param-value>-->
+        <!--<param-value>0ZORROWMSTNGRM0</param-value>-->
+    </context-param>
+    <context-param>
+        <param-name>Titulo</param-name>           
+        <param-value>Zorro</param-value>
+    </context-param>
+    <context-param>
+        <param-name>Subtitulo</param-name>           
+        <param-value>  </param-value>
+    </context-param>
+    <context-param>
+        <param-name>Cliente</param-name>           
+        <param-value>ZORRO</param-value>
+    </context-param>
+    <!--Configuracion de Pantalla de Inventarios de ADL-->
+    <context-param>
+        <param-name>ADL.Inventario.Etiqueta1</param-name>           
+        <param-value>Documento</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ADL.Inventario.Etiqueta1</param-name>           
+        <param-value>Doc.Recibo</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ADL.Inventario.Etiqueta2</param-name>           
+        <param-value>Localidad</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ADL.Inventario.Etiqueta3</param-name>           
+        <param-value>Licencia</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ADL.Inventario.Etiqueta4</param-name>           
+        <param-value>Producto</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ADL.Inventario.Etiqueta5</param-name>           
+        <param-value>Cantidad Etiqueta</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ADL.Inventario.Etiqueta6</param-name>           
+        <param-value>Calidad</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ADL.Inventario.Etiqueta7</param-name>           
+        <param-value>Lote</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ADL.Inventario.Etiqueta7.EventosJS</param-name>           
+        <param-value>onblur="licencia();"</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ADL.Inventario.Etiqueta8</param-name>           
+        <param-value>Cantidad Conteo</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ADL.Inventario.Etiqueta9</param-name>           
+        <param-value>Caducidad (aaaa-mm-dd)</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ADL.Inventario.Etiqueta10</param-name>           
+        <param-value>Fiscal</param-value>
+    </context-param>
+    <!--Configuracion de Pantalla de Orden de Compra de ADL-->
+    
+    
+    <context-param>
+        <param-name>ADL.OC.Etiqueta1</param-name>           
+        <param-value>Licencia</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ADL.OC.Etiqueta2</param-name>           
+        <param-value>Producto</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ADL.OC.Etiqueta3</param-name>           
+        <param-value>Cant.Etiqueta</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ADL.OC.Etiqueta4</param-name>           
+        <param-value>Calidad</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ADL.OC.Etiqueta5</param-name>           
+        <param-value>Lote</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ADL.OC.Etiqueta5.EventosJS</param-name>           
+        <param-value>onblur="licencia();"</param-value>
+    </context-param>
+        
+    <context-param>
+        <param-name>ADL.OC.Etiqueta6</param-name>           
+        <param-value>Cantidad Conteo</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ADL.OC.Etiqueta7</param-name>           
+        <param-value>Caducidad</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ADL.OC.Etiqueta8</param-name>           
+        <param-value>Fiscal</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ADL.OC.Etiqueta10</param-name>           
+        <param-value>Delivery</param-value>
+    </context-param>
+    
+    <context-param>
+        <param-name>ADL.OC.Etiqueta9.Display</param-name>           
+        <param-value>inline-grid</param-value>
+    </context-param>
+    
+    <!--Configuracion de Pantalla de Orden de Compra de RINOTULTI-->
+    <context-param>
+        <param-name>RINOTULTI.OC.Etiqueta1</param-name>           
+        <param-value>LPN</param-value>
+    </context-param>
+    <context-param>
+        <param-name>RINOTULTI.OC.Etiqueta2</param-name>           
+        <param-value>Producto</param-value>
+    </context-param>
+    <context-param>
+        <param-name>RINOTULTI.OC.Etiqueta3</param-name>           
+        <param-value>Cantidad</param-value>
+    </context-param>
+    <context-param>
+        <param-name>RINOTULTI.OC.Etiqueta4</param-name>           
+        <param-value>Calidad</param-value>
+    </context-param>
+    <context-param>
+        <param-name>RINOTULTI.OC.Etiqueta5</param-name>           
+        <param-value>Serie</param-value>
+    </context-param>
+    <context-param>
+        <param-name>RINOTULTI.OC.Etiqueta6</param-name>           
+        <param-value>Iniciativa</param-value>
+    </context-param>
+    <context-param>
+        <param-name>RINOTULTI.OC.Etiqueta6.Display</param-name>           
+        <param-value>none</param-value>
+    </context-param>
+    <context-param>
+        <param-name>RINOTULTI.OC.Etiqueta7</param-name>           
+        <param-value>Caducidad</param-value>
+    </context-param>
+    <context-param>
+        <param-name>RINOTULTI.OC.Etiqueta7.Display</param-name>           
+        <param-value>none</param-value>
+    </context-param>
+    <context-param>
+        <param-name>RINOTULTI.OC.Etiqueta8</param-name>           
+        <param-value>Fiscal</param-value>
+    </context-param>
+    <context-param>
+        <param-name>RINOTULTI.OC.Etiqueta8.Display</param-name>           
+        <param-value>none</param-value>
+    </context-param>
+        
+    
+        
+    <context-param>
+        <param-name>Driver</param-name>
+        <param-value>oracle.jdbc.OracleDriver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>Port</param-name>
+        <param-value>1521</param-value>
+    </context-param>
+    
+    <session-config>
+        <session-timeout>
+            10000
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
